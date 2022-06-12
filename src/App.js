@@ -1,25 +1,63 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+	BrowserRouter as Router,
+	Route,
+	Routes,
+} from "react-router-dom";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import { AuthProvider } from "./auth/Auth";
+import PrivateRoute from "./auth/PrivateRoute";
+import Doctor from "./pages/Doctor";
+import Patient from "./pages/Patient";
+import AppointmentHistory from "./pages/AppointmentHistory";
+import DoctorAppointments from "./pages/DoctorAppointments";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+		<AuthProvider>
+			<Router>
+				<Routes>
+					<Route path="/"
+						element={
+							<PrivateRoute>
+								<Dashboard />
+							</PrivateRoute>
+						}
+					/>
+					<Route path="/doctor"
+					       element={
+						       <PrivateRoute>
+							       <Doctor />
+						       </PrivateRoute>
+					       }
+					/>
+					<Route path="/patient"
+					       element={
+						       <PrivateRoute>
+							       <Patient />
+						       </PrivateRoute>
+					       }
+					/>
+					<Route path="/history"
+					       element={
+						       <PrivateRoute>
+							       <AppointmentHistory />
+						       </PrivateRoute>
+					       }
+					/>
+					<Route path="history/appointments"
+					       element={
+						       <PrivateRoute>
+							       <DoctorAppointments />
+						       </PrivateRoute>
+					       }
+					/>
+					<Route exact path="/login" element={<Login/>}/>
+				</Routes>
+			</Router>
+		</AuthProvider>
+    );
 }
 
 export default App;
