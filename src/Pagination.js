@@ -26,6 +26,8 @@ const Pagination = ({ perPage, total, paginate, pageIndex, setCurrentIndex }) =>
 				end = total;
 			}
 		}
+		if(total === 0)
+			start = 0
 
 		return `Showing ${start} to ${end} of ${total} results`
 	}
