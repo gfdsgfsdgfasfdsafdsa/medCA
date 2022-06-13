@@ -29,7 +29,7 @@ const Dashboard = () => {
 				const result = [];
 				let index = 0
 				querySnapshot.forEach((data) => {
-					if(data.data()?.userType === 'doctor'){
+					if(data.data()?.userType === 'doctor' && data.data()?.userStatus === 'verified'){
 						result.push({
 							...data.data(),
 							id: index,
