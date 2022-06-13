@@ -137,7 +137,7 @@ const Dashboard = () => {
 							type="text"
 							className="block w-full px-3 py-1 text-base font-normal text-gray-700 bg-white bg-clip-padding
         border border-solid border-gray-300 rounded m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-							placeholder="Search VerifyDoctor"
+							placeholder="Search Doctor"
 						/>
 					</div>
 				</header>
@@ -149,7 +149,7 @@ const Dashboard = () => {
 							<thead className="text-xs font-semibold uppercase text-slate-400 bg-slate-50">
 							<tr>
 								<th className="p-2 whitespace-nowrap">
-									<div className="font-semibold text-left">VerifyDoctor</div>
+									<div className="font-semibold text-left">Doctor</div>
 								</th>
 								<th className="p-2 whitespace-nowrap">
 									<div className="font-semibold text-left">Email</div>
@@ -218,7 +218,7 @@ const Dashboard = () => {
 							type="text"
 							className="block w-full px-3 py-1 text-base font-normal text-gray-700 bg-white bg-clip-padding
         border border-solid border-gray-300 rounded m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-							placeholder="Search VerifyDoctor/Patient"
+							placeholder="Search Doctor/Patient"
 						/>
 					</div>
 				</header>
@@ -230,7 +230,7 @@ const Dashboard = () => {
 							<thead className="text-xs font-semibold uppercase text-slate-400 bg-slate-50">
 							<tr>
 								<th className="p-2 whitespace-nowrap">
-									<div className="font-semibold text-left">VerifyDoctor Name</div>
+									<div className="font-semibold text-left">Doctor Name</div>
 								</th>
 								<th className="p-2 whitespace-nowrap">
 									<div className="font-semibold text-left">Patient Name</div>
