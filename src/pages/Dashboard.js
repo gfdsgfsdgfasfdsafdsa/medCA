@@ -4,6 +4,7 @@ import { collection } from "firebase/firestore";
 import { onSnapshot, query, orderBy } from "firebase/firestore";
 import { db } from '../firebase-config'
 import Pagination from "../Pagination";
+import formatDate from "../lib/formatDate";
 
 const Dashboard = () => {
 	const [doctors, setDoctors] = useState([])
@@ -52,6 +53,7 @@ const Dashboard = () => {
 				querySnapshot.forEach((data) => {
 					result.push({
 						...data.data(),
+						schedule_date: formatDate(data.data()?.schedule_date),
 						id: index++,
 					});
 				});
