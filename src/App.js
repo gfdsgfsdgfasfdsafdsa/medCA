@@ -7,10 +7,12 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import { AuthProvider } from "./auth/Auth";
 import PrivateRoute from "./auth/PrivateRoute";
-import Doctor from "./pages/Doctor";
+import VerifyDoctor from "./pages/VerifyDoctor";
 import Patient from "./pages/Patient";
 import AppointmentHistory from "./pages/AppointmentHistory";
 import DoctorAppointments from "./pages/DoctorAppointments";
+import VerifiedDoctors from "./pages/VerifiedDoctors";
+import DoctorInfo from "./pages/DoctorInfo";
 
 function App() {
 
@@ -25,10 +27,24 @@ function App() {
 							</PrivateRoute>
 						}
 					/>
-					<Route path="/doctor"
+					<Route path="/doctors/verify"
 					       element={
 						       <PrivateRoute>
-							       <Doctor />
+							       <VerifyDoctor />
+						       </PrivateRoute>
+					       }
+					/>
+					<Route path="/doctors/verified"
+					       element={
+						       <PrivateRoute>
+							       <VerifiedDoctors />
+						       </PrivateRoute>
+					       }
+					/>
+					<Route path="/doctors/info"
+					       element={
+						       <PrivateRoute>
+							       <DoctorInfo />
 						       </PrivateRoute>
 					       }
 					/>

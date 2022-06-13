@@ -78,7 +78,7 @@ const AppointmentHistory = () => {
 				<header className="px-5 py-4 border-b border-slate-100 flex justify-between">
 					<div>
 						<h2 className="font-semibold text-slate-800 text-lg underline">Appointment History</h2>
-						<span className="text-xs text-slate-800">Select Doctor</span>
+						<span className="text-xs text-slate-800">Select VerifyDoctor</span>
 					</div>
 					<div className="mt-2 xl:w-80">
 						<input
@@ -86,7 +86,7 @@ const AppointmentHistory = () => {
 							type="text"
 							className="block w-full px-3 py-1 text-base font-normal text-gray-700 bg-white bg-clip-padding
         border border-solid border-gray-300 rounded m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-							placeholder="Search Doctor"
+							placeholder="Search VerifyDoctor"
 						/>
 					</div>
 				</header>
@@ -99,7 +99,7 @@ const AppointmentHistory = () => {
 							<thead className="text-xs font-semibold uppercase text-slate-400 bg-slate-50">
 							<tr>
 								<th className="p-2 whitespace-nowrap">
-									<div className="font-semibold text-left">Doctor</div>
+									<div className="font-semibold text-left">VerifyDoctor</div>
 								</th>
 								<th className="p-2 whitespace-nowrap">
 									<div className="font-semibold text-left">Email</div>
