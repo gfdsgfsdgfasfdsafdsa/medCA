@@ -241,6 +241,9 @@ const Dashboard = () => {
 								<th className="p-2 whitespace-nowrap">
 									<div className="font-semibold text-center">Schedule Time</div>
 								</th>
+								<th className="p-2 whitespace-nowrap">
+									<div className="font-semibold text-left">Appointment Reason</div>
+								</th>
 							</tr>
 							</thead>
 							{/* Table body */}
@@ -270,6 +273,9 @@ const Dashboard = () => {
 											</td>
 											<td className="p-2 whitespace-nowrap">
 												<div className="text-center">{appointment.schedule_time}</div>
+											</td>
+											<td className="p-2 max-w-sm">
+												<div className="text-left">{appointment?.appointmentreason}</div>
 											</td>
 										</tr>
 									)
